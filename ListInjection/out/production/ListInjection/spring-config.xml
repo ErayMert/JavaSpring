@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="car1" class="com.spring.Car">
+        <constructor-arg name="brand" value="W"/>
+        <constructor-arg name="model" value="jetta"/>
+        <constructor-arg name="segment" value="C"/>
+    </bean>
+
+    <bean id="car2" class="com.spring.Car">
+        <constructor-arg name="brand" value="W"/>
+        <constructor-arg name="model" value="passat"/>
+        <constructor-arg name="segment" value="A"/>
+    </bean>
+
+    <bean id="car3" class="com.spring.Car">
+        <constructor-arg name="brand" value="W"/>
+        <constructor-arg name="model" value="cla-200"/>
+        <constructor-arg name="segment" value="A"/>
+    </bean>
+
+    <bean id="cars" class="com.spring.Cars">
+        <constructor-arg name="cars">
+            <list>
+                <ref bean="car1"/>
+                <ref bean="car2"/>
+                <ref bean="car3"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
