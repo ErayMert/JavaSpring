@@ -6,16 +6,14 @@ package com.spring;
 public class Car {
     private String brand;
     private String model;
-    private String segment;
 
     public Car(){
 
     }
 
-    public Car(String brand, String model, String segment){
+    public Car(String brand, String model){
         this.brand = brand;
         this.model = model;
-        this.segment = segment;
     }
 
     public String getBrand(){
@@ -26,10 +24,6 @@ public class Car {
         return model;
     }
 
-    public String getSegment(){
-        return segment;
-    }
-
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -38,16 +32,11 @@ public class Car {
         this.model = model;
     }
 
-    public void setSegment(String segment) {
-        this.segment = segment;
-    }
-
     @Override
     public String toString() {
-        return "Car {" +
+        return "Car{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
-                ", segment='" + segment + '\'' +
                 '}';
     }
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="c1" class="com.spring.Car">
+        <property name="brand" value="Lamborgini"/>
+        <property name="model" value="Element"/>
+     </bean>
+
+    <bean id="c2" class="com.spring.Car">
+        <property name="brand" value="Tesla"/>
+        <property name="model" value="Model S"/>
+    </bean>
+
+    <bean id="c3" class="com.spring.Car">
+        <property name="brand" value="Bugatti"/>
+        <property name="model" value="Veyron V16"/>
+    </bean>
+    
+    <bean id="cars" class="com.spring.Cars">
+        <property name="fastestCar">
+            <bean class="com.spring.Car">
+                <property name="brand" value="Bugatti"/>
+                <property name="model" value="Veyron V16"/>
+            </bean>
+        </property>
+        
+        <property name="cars">
+            <list>
+                <bean id="c2" class="com.spring.Car">
+                    <property name="brand" value="Tesla"/>
+                    <property name="model" value="Model S"/>
+                </bean>
+
+                <bean id="c3" class="com.spring.Car">
+                    <property name="brand" value="Bugatti"/>
+                    <property name="model" value="Veyron V16"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>
