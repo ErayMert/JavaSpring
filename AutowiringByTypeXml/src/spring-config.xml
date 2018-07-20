@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="electrical" class="com.spring.ElectricalEngine">
+
+    </bean>
+
+    <bean id="internalcombustion" class="com.spring.InternalCombustionEngine">
+
+    </bean>
+
+    <bean id="runner" class="com.spring.Run" autowire="byType">
+
+    </bean>
+
+</beans>
