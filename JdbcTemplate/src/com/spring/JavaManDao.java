@@ -1,6 +1,8 @@
 package com.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.util.List;
@@ -8,11 +10,14 @@ import java.util.List;
 /**
  * Created by eraym on 22.07.2018.
  */
+
+@Component("javaManDao")
 public class JavaManDao {
 
     private DataSource dataSource;
     private JdbcTemplate jdbcTemplate;
 
+    @Autowired
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         jdbcTemplate = new JdbcTemplate(dataSource);
@@ -30,6 +35,6 @@ public class JavaManDao {
     }
 
     public void createJavaMan(String name, String lastName){
-        jdbcTemplate.update("INSERT INTO javaman(isim, soyisim ) VALUES (?,?)", name, lastName);
+        jdbcTemplate.update("INSERT INTO javaman(firstName, lastName ) VALUES (?,?)", name, lastName);
     }
 }

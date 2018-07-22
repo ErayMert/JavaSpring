@@ -12,6 +12,6 @@ public class JavaManMapper implements RowMapper<JavaMan>{
 
     @Override
     public JavaMan mapRow(ResultSet resultSet, int i) throws SQLException {
-        return new JavaMan(resultSet.getInt("id"), resultSet.getString("isim"), resultSet.getString("soyisim"));
+        return new JavaMan(resultSet.getInt("id"), resultSet.getString("firstName"), resultSet.getString("lastName"));
     }
 }

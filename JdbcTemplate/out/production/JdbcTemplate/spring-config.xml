@@ -15,7 +15,10 @@
         <property name="url" value="jdbc:mysql://localhost:3306/coder"/>
       </bean>
 
+    <!--
     <bean id="javaManDao" class="com.spring.JavaManDao">
         <property name="dataSource" ref="datasource"/>
     </bean>
+
+    -->
 </beans>
